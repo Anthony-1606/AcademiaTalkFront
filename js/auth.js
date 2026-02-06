@@ -5,8 +5,7 @@
  * Manages form submissions, API calls, and user feedback.
  */
 
-// Configuration
-const API_BASE_URL = 'https://your-backend-url.onrender.com/api'; // TODO: Update with your Render backend URL
+// API_BASE_URL is defined in config.js
 
 /**
  * Show a message to the user

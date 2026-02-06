@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - AcademiaTalk</title>
+    <meta name="description" content="Share and discuss academic topics">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Academia<span>Talk</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="mb-2">Academic Forum</h1>
+
+        <!-- Alert Messages -->
+        <div id="message" class="message"></div>
+
+        <!-- Create Post Section -->
+        <section class="card mb-3">
+            <h2 class="mb-2">Create New Post</h2>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input 
+                        type="text" 
+                        id="postTitle" 
+                        name="title" 
+                        placeholder="Enter post title (5-200 characters)"
+                        minlength="5"
+                        maxlength="200"
+                        required
+                    >
+                    <small class="text-muted">Character count: <span id="titleCount">0</span>/200</small>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea 
+                        id="postContent" 
+                        name="content" 
+                        placeholder="Share your thoughts... (10-5000 characters)"
+                        minlength="10"
+                        maxlength="5000"
+                        required
+                    ></textarea>
+                    <small class="text-muted">Character count: <span id="contentCount">0</span>/5000</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Publish Post</button>
+            </form>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading posts...</p>
+        </div>
+
+        <!-- Posts List Section -->
+        <section>
+            <h2 class="mb-2">Recent Posts</h2>
+            <div id="postsContainer">
+                <!-- Posts will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/forum.js"></script>
+</body>
+</html>

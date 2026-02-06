@@ -76,6 +76,17 @@ header {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .logo h1 {
     font-size: var(--font-size-xl);
     font-weight: 600;

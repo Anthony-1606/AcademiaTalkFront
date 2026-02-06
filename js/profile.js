@@ -53,6 +53,17 @@ function checkAuthentication() {
 }
 
 /**
+ * Display user name in header
+ * @param {string} name - User's name
+ */
+function displayUserName(name) {
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement && name) {
+        userNameElement.textContent = name;
+    }
+}
+
+/**
  * Handle user logout
  */
 async function handleLogout() {
@@ -119,7 +130,10 @@ async function loadProfile() {
             
             // Show profile card
             document.getElementById('profileCard').style.display = 'block';
-            
+
+            // Display user name in header
+            displayUserName(data.data.name);
+
             // Update localStorage with fresh data
             localStorage.setItem('user', JSON.stringify(data.data));
             

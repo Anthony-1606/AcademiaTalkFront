@@ -65,13 +65,27 @@ async function checkAuthentication() {
             window.location.href = 'index.html';
             return false;
         }
-        
+
+        // Display user name in header
+        displayUserName(data.data.name);
+
         return true;
         
     } catch (error) {
         console.error('Authentication check error:', error);
         showMessage('Failed to verify authentication', 'error');
         return false;
+    }
+}
+
+/**
+ * Display user name in header
+ * @param {string} name - User's name
+ */
+function displayUserName(name) {
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement && name) {
+        userNameElement.textContent = name;
     }
 }
 

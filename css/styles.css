@@ -110,6 +110,12 @@ nav a:hover {
     font-size: var(--font-size-base);
 }
 
+.user-name {
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
 /* ====================================
    MAIN CONTAINER
    ==================================== */
